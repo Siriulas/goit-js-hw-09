@@ -64,31 +64,23 @@ const images = [
   },
 ];
 const galleryContainer = document.querySelector('.gallery');
-const galleryMarkup = images
-  .map(({ preview, original, description }) => {
-    return `
+const galleryItems = images
+  .map(
+    ({ preview, original, description }) => `
     <li class="gallery-item">
       <a class="gallery-link" href="${original}">
-        <img
-          class="gallery-image"
-          src="${preview}"
-          alt="${description}"
-        />
+        <img class="gallery-image" src="${preview}" alt="${description}" />
       </a>
     </li>
-  `;
-  })
+  `
+  )
   .join('');
 
-galleryContainer.innerHTML = galleryMarkup;
+galleryContainer.innerHTML = galleryItems;
 
-galleryContainer.addEventListener('click', evt => {
+new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
+const galleryButton = document.querySelector('.gallery-href-wrap');
+galleryButton.addEventListener('click', evt => {
   evt.preventDefault();
-  const { target } = evt;
-  if (target.nodeName !== 'IMG') return;
-  const largeImageUrl = target.dataset.source;
-  const modal = SimpleLightbox.create(
-    `<img src="${largeImageUrl}" alt='${target.alt}'/>`
-  );
-  modal.show();
+  location.href = '../index.html';
 });
