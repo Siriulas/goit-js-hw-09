@@ -82,5 +82,5 @@ new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
 const galleryButton = document.querySelector('.gallery-href-wrap');
 galleryButton.addEventListener('click', evt => {
   evt.preventDefault();
-  location.href = '../index.html';
+  location.href = 'https://siriulas.github.io/goit-js-hw-09/';
 });

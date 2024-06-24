@@ -37,5 +37,5 @@ form.addEventListener('submit', event => {
 const formButton = document.querySelector('.form-href-wrap');
 formButton.addEventListener('click', evt => {
   evt.preventDefault();
-  location.href = '../index.html';
+  location.href = 'https://siriulas.github.io/goit-js-hw-09/';
 });
