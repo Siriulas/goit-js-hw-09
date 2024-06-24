@@ -4,5 +4,5 @@ import"./assets/modulepreload-polyfill-3cfb730f.js";const t=[{preview:"https://c
         <img class="gallery-image" src="${o}" alt="${p}" />
       </a>
     </li>
-  `).join("");i.innerHTML=e;new SimpleLightbox(".gallery a",{captionsData:"alt",captionDelay:250});const n=document.querySelector(".gallery-href-wrap");n.addEventListener("click",o=>{o.preventDefault(),location.href="../index.html"});
+  `).join("");i.innerHTML=e;new SimpleLightbox(".gallery a",{captionsData:"alt",captionDelay:250});const n=document.querySelector(".gallery-href-wrap");n.addEventListener("click",o=>{o.preventDefault(),location.href="https://siriulas.github.io/goit-js-hw-09/"});
 //# sourceMappingURL=commonHelpers.js.map
