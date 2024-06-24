@@ -23,12 +23,19 @@ form.addEventListener('input', event => {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  if (!formData.email || !formData.message) {
+  const trimmedEmail = formData.email.trim();
+  const trimmedMessage = formData.message.trim();
+
+  if (!trimmedEmail || !trimmedMessage) {
     alert('Fill please all fields');
     return;
   }
 
-  console.log('Form submitted:', formData);
+  console.log('Form submitted:', {
+    email: trimmedEmail,
+    message: trimmedMessage,
+  });
+
   localStorage.removeItem('feedback-form-state');
   formData.email = '';
   formData.message = '';
